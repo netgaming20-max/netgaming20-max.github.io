@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #000; font-family: Arial, sans-serif; }
+    #yt, #vid { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+    #card { position: absolute; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 24px;
+        color: #fff; background: radial-gradient(80% 80% at 30% 30%, #4a1630, #000 75%); text-align: center; padding: 60px; box-sizing: border-box; }
+    #card .note { width: 220px; height: 220px; border-radius: 24px; background: linear-gradient(135deg, #fc3c44, #a1207a);
+        display: flex; align-items: center; justify-content: center; font-size: 120px; }
+    #card .title { font-size: 46px; font-weight: 700; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="yt"></div>
+<video id="vid" playsinline></video>
+<div id="card"><div class="note">&#9835;</div><div class="title" id="cardTitle"></div></div>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="dui.js"></script>
+</body>
+</html>
